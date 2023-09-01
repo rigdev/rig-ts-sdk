@@ -1,20 +1,20 @@
 import { createConnectTransport, Transport } from '@bufbuild/connect-web';
 import { Interceptor, createPromiseClient, PromiseClient } from '@bufbuild/connect';
 
-import { Service as AuthService } from '@rig/api/api/v1/authentication/service_connect.js';
-import { LoginRequest, LoginResponse } from '@rig/api/api/v1/authentication/service_pb.js';
+import { Service as AuthService } from '@rigdev/api/api/v1/authentication/service_connect.js';
+import { LoginRequest, LoginResponse } from '@rigdev/api/api/v1/authentication/service_pb.js';
 
 import { SessionManager, InMemorySessionManager, LocalStorageSessionManager, SessionKey } from './session_manager.js';
 import { defaultHost, defaultLoginMethod } from './defaults.js';
-import { Service as UserService } from '@rig/api/api/v1/user/service_connect.js';
-import { Service as UserSettingsService } from '@rig/api/api/v1/user/settings/service_connect.js';
-import { Service as ProjectSettingsService } from '@rig/api/api/v1/project/settings/service_connect.js';
-import { Service as ProjectService } from '@rig/api/api/v1/project/service_connect.js';
-import { Service as GroupService } from '@rig/api/api/v1/group/service_connect.js';
-import { Service as StorageService } from '@rig/api/api/v1/storage/service_connect.js';
-import { Service as DatabaseService } from '@rig/api/api/v1/database/service_connect.js';
-import { Service as ServiceAccountService } from '@rig/api/api/v1/service_account/service_connect.js';
-import { Service as CapsuleService } from '@rig/api/api/v1/capsule/service_connect.js';
+import { Service as UserService } from '@rigdev/api/api/v1/user/service_connect.js';
+import { Service as UserSettingsService } from '@rigdev/api/api/v1/user/settings/service_connect.js';
+import { Service as ProjectSettingsService } from '@rigdev/api/api/v1/project/settings/service_connect.js';
+import { Service as ProjectService } from '@rigdev/api/api/v1/project/service_connect.js';
+import { Service as GroupService } from '@rigdev/api/api/v1/group/service_connect.js';
+import { Service as StorageService } from '@rigdev/api/api/v1/storage/service_connect.js';
+import { Service as DatabaseService } from '@rigdev/api/api/v1/database/service_connect.js';
+import { Service as ServiceAccountService } from '@rigdev/api/api/v1/service_account/service_connect.js';
+import { Service as CapsuleService } from '@rigdev/api/api/v1/capsule/service_connect.js';
 import { PartialMessage } from '@bufbuild/protobuf';
 
 export interface ClientOptions {

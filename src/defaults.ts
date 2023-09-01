@@ -1,5 +1,5 @@
 import { PartialMessage } from '@bufbuild/protobuf';
-import { LoginRequest } from '@rig/api/api/v1/authentication/service_pb.js';
+import { LoginRequest } from '@rigdev/api/api/v1/authentication/service_pb.js';
 
 export function defaultHost(): string {
   const _default = 'http://localhost:4747/';
