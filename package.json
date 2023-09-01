@@ -1,5 +1,5 @@
 {
-  "name": "@rig/sdk",
+  "name": "@rigdev/sdk",
   "version": "0.0.2-dev.24",
   "description": "Typescript SDK for the Rig client",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "@bufbuild/connect": "^0.8.6",
     "@bufbuild/connect-web": "^0.8.6",
     "@bufbuild/protobuf": "^1.2.0",
-    "@rig/api": "^0.0.2-dev.11"
+    "@rigdev/api": "^0.0.2-dev.16"
   },
   "devDependencies": {
     "@types/node": "^20.5.7",
