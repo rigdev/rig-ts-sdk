@@ -1,0 +1,43 @@
+{
+  "name": "@rig/sdk",
+  "version": "0.0.2-dev.24",
+  "description": "Typescript SDK for the Rig client",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "files": [
+    "lib",
+    "src",
+    "tsconfig.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prettier": "prettier --write .",
+    "lint:js": "eslint --ext \".ts\" --ignore-path .gitignore .",
+    "lint:prettier": "prettier --check .",
+    "lint:ts": "tsc --noEmit",
+    "lint": "npm run lint:js && npm run lint:prettier",
+    "lintfix": "eslint --ext .ts --fix --max-warnings=0 ."
+  },
+  "repository": {
+    "type": "https://github.com/rigdev/rig-ts-sdk",
+    "url": "."
+  },
+  "dependencies": {
+    "@bufbuild/connect": "^0.8.6",
+    "@bufbuild/connect-web": "^0.8.6",
+    "@bufbuild/protobuf": "^1.2.0",
+    "@rig/api": "^0.0.2-dev.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.47.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.6"
+  },
+  "author": "",
+  "license": "ISC"
+}
