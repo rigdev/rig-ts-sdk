@@ -15,6 +15,7 @@ import { Service as StorageService } from '@rigdev/api/api/v1/storage/service_co
 import { Service as DatabaseService } from '@rigdev/api/api/v1/database/service_connect.js';
 import { Service as ServiceAccountService } from '@rigdev/api/api/v1/service_account/service_connect.js';
 import { Service as CapsuleService } from '@rigdev/api/api/v1/capsule/service_connect.js';
+import { Service as BuildService } from '@rigdev/api/api/v1/build/service_connect.js';
 import { PartialMessage } from '@bufbuild/protobuf';
 
 export interface ClientOptions {
@@ -50,6 +51,7 @@ export class Client {
   serviceAccount: PromiseClient<typeof ServiceAccountService>;
   capsule: PromiseClient<typeof CapsuleService>;
   auth: PromiseClient<typeof AuthService>;
+  build: PromiseClient<typeof BuildService>;
 
   private _authInterceptor: Interceptor = (next) => async (req) => {
     const path = new URL(req.url).pathname;
@@ -141,6 +143,7 @@ export class Client {
     this.serviceAccount = createPromiseClient(ServiceAccountService, this._transport);
     this.capsule = createPromiseClient(CapsuleService, this._transport);
     this.auth = createPromiseClient(AuthService, this._transport);
+    this.build = createPromiseClient(BuildService, this._transport);
   }
 
   async login(loginRequest: PartialMessage<LoginRequest>): Promise<LoginResponse> {

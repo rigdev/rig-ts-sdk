@@ -27,7 +27,7 @@
     "@bufbuild/connect": "^0.8.6",
     "@bufbuild/connect-web": "^0.8.6",
     "@bufbuild/protobuf": "^1.2.0",
-    "@rigdev/api": "^0.0.2-dev.16"
+    "@rigdev/api": "^0.0.2-dev.59"
   },
   "devDependencies": {
     "@types/node": "^20.5.7",
