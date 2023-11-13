@@ -11,8 +11,6 @@ import { Service as UserSettingsService } from '@rigdev/api/api/v1/user/settings
 import { Service as ProjectSettingsService } from '@rigdev/api/api/v1/project/settings/service_connect.js';
 import { Service as ProjectService } from '@rigdev/api/api/v1/project/service_connect.js';
 import { Service as GroupService } from '@rigdev/api/api/v1/group/service_connect.js';
-import { Service as StorageService } from '@rigdev/api/api/v1/storage/service_connect.js';
-import { Service as DatabaseService } from '@rigdev/api/api/v1/database/service_connect.js';
 import { Service as ServiceAccountService } from '@rigdev/api/api/v1/service_account/service_connect.js';
 import { Service as CapsuleService } from '@rigdev/api/api/v1/capsule/service_connect.js';
 import { Service as BuildService } from '@rigdev/api/api/v1/build/service_connect.js';
@@ -45,9 +43,7 @@ export class Client {
   userSettings: PromiseClient<typeof UserSettingsService>;
   projectSettings: PromiseClient<typeof ProjectSettingsService>;
   projects: PromiseClient<typeof ProjectService>;
-  storage: PromiseClient<typeof StorageService>;
   group: PromiseClient<typeof GroupService>;
-  database: PromiseClient<typeof DatabaseService>;
   serviceAccount: PromiseClient<typeof ServiceAccountService>;
   capsule: PromiseClient<typeof CapsuleService>;
   auth: PromiseClient<typeof AuthService>;
@@ -137,9 +133,7 @@ export class Client {
     this.userSettings = createPromiseClient(UserSettingsService, this._transport);
     this.projectSettings = createPromiseClient(ProjectSettingsService, this._transport);
     this.projects = createPromiseClient(ProjectService, this._transport);
-    this.storage = createPromiseClient(StorageService, this._transport);
     this.group = createPromiseClient(GroupService, this._transport);
-    this.database = createPromiseClient(DatabaseService, this._transport);
     this.serviceAccount = createPromiseClient(ServiceAccountService, this._transport);
     this.capsule = createPromiseClient(CapsuleService, this._transport);
     this.auth = createPromiseClient(AuthService, this._transport);
