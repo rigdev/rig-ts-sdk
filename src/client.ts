@@ -1,6 +1,4 @@
-import { createConnectTransport, Transport } from '@bufbuild/connect-web';
-import { Interceptor, createPromiseClient, PromiseClient } from '@bufbuild/connect';
-
+import { Interceptor, createPromiseClient, PromiseClient, Transport } from '@connectrpc/connect';
 import { Service as AuthService } from '@rigdev/api/api/v1/authentication/service_connect.js';
 import { LoginRequest, LoginResponse } from '@rigdev/api/api/v1/authentication/service_pb.js';
 
@@ -15,6 +13,7 @@ import { Service as ServiceAccountService } from '@rigdev/api/api/v1/service_acc
 import { Service as CapsuleService } from '@rigdev/api/api/v1/capsule/service_connect.js';
 import { Service as BuildService } from '@rigdev/api/api/v1/build/service_connect.js';
 import { PartialMessage } from '@bufbuild/protobuf';
+import { createConnectTransport } from '@connectrpc/connect-web';
 
 export interface ClientOptions {
   host?: string;
@@ -66,6 +65,7 @@ export class Client {
     }
     return await next(req);
   };
+
   private _transport: Transport;
 
   sessionManager: SessionManager;
