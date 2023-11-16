@@ -1,6 +1,6 @@
 {
   "name": "@rigdev/sdk",
-  "version": "0.0.2-dev.28",
+  "version": "0.0.2-dev.29",
   "description": "Typescript SDK for the Rig client",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
